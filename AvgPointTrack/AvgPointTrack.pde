@@ -38,7 +38,7 @@ void draw() {
   
   for(int x = 0; x < kinect.WIDTHDepth; x++){
     for(int y = 0; y < kinect.HEIGHTDepth; y++){
-      int offset = x + y * kinect.WIDTHDepth;
+      int offset = x + y * kinect.WIDTHDepth;//A paticular pixel
       int d = depth[offset];
       
       if(d > minThresh && d < maxThresh){
