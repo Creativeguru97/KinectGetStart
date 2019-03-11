@@ -10,6 +10,7 @@ import KinectPV2.*;
 
 KinectPV2 kinect;
 
+
 void setup() {
   size(1920, 1080, P3D);
 
@@ -37,7 +38,7 @@ void draw() {
     for(int y = 0; y < img.height; y+=skip){
       int index = x + y * img.width;
       float b = brightness(img.pixels[index]);
-      float z=map(b, 0, 255, -150, 150);
+      float z=map(b, 0, 255, -100, 100);
       //float z = 0;
       fill(255);
       pushMatrix();
