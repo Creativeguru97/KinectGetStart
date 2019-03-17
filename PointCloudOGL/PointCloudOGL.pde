@@ -17,8 +17,8 @@ boolean foundUsers = false;
 float scaleDepthPoint = 1.0;
 
 //Distance Threashold
-int maxD = 4500; // 4m
-int minD = 0;  //  0m
+int maxD = 1800; // 4m
+int minD = 900;  //  0m
 
 //openGL object and shader
 PGL     pgl;
@@ -85,9 +85,12 @@ public void draw() {
       //fill(0, 255, 0);
       colorMode(HSB);
       float colorZ = map(zval, -200, 700, 0, 255);
-      stroke(colorZ, 120, 255);
+      //stroke(colorZ, 120, 255);
+      stroke(150, 120, 255);
       strokeWeight(0.006);
       point(x, y, z);
+   
+ 
    }
 
   ////begin openGL calls and bind the shader
